@@ -4,7 +4,7 @@ const sitiosData = [
         id: 1,
         nombre: "Plaza Central",
         descripcion: "Corazón histórico de la ciudad con arquitectura colonial",
-        imagen: "https://images.unsplash.com/photo-1555881938-4ec8c8b6e3f0?w=500",
+        imagen: "https://thumbs.dreamstime.com/b/noche-en-la-habana-vieja-50826957.jpg",
         atractivos: [
             { 
                 nombre: "Monumento a los Fundadores", 
@@ -27,7 +27,7 @@ const sitiosData = [
         id: 2,
         nombre: "Museo de Arte Regional",
         descripcion: "Colección permanente de arte local y exposiciones temporales",
-        imagen: "https://images.unsplash.com/photo-1566127444979-b3d2b64d6643?w=500",
+        imagen: "https://i0.wp.com/evemuseografia.com/wp-content/uploads/2020/01/EVE21012020.jpg?fit=630%2C472&ssl=1",
         atractivos: [
             { 
                 nombre: "Sala de Arte Colonial", 
