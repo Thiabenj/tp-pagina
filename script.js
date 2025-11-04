@@ -239,7 +239,8 @@ function renderCentrosOnMap() {
             <strong>${centro.nombre}</strong><br>
             Tipo: ${centro.tipo === 'fijo' ? 'Centro Fijo' : 'Móvil'}<br>
             Horario: ${centro.horario}<br>
-            ${centro.servicios ? 'Servicios: ' + centro.servicios : ''}
+            ${centro.servicios ? 'Servicios: ' + centro.servicios : ''}<br>
+            <a href="https://www.google.com/maps/search/?api=1&query=${centro.direccion}" target="_blank">${centro.direccion ? 'Dirección: ' + centro.direccion : ''}</a>
         `);
     });
     
@@ -256,7 +257,8 @@ function renderCentrosInfo() {
                     <p style="font-size: 13px; color: #666;">
                         <strong>Tipo:</strong> ${centro.tipo === 'fijo' ? 'Centro Fijo' : 'Móvil'}<br>
                         <strong>Horario:</strong> ${centro.horario}<br>
-                        ${centro.servicios ? '<strong>Servicios:</strong> ' + centro.servicios : ''}
+                        ${centro.servicios ? '<strong>Servicios:</strong> ' + centro.servicios : ''}<br>
+                        ${centro.direccion ? '<strong>Dirección:</strong> ' + centro.direccion : ''}
                     </p>
                 </div>
             `).join('')}
@@ -273,11 +275,11 @@ async function updateCenters() {
         
         // Simular datos obtenidos del sistema externo
         centrosData = [
-            { nombre: "Centro Principal", tipo: "fijo", lat: -34.6037, lng: -58.3816, horario: "08:00 - 20:00", servicios: "Info, Primeros Auxilios" },
-            { nombre: "Centro Norte", tipo: "fijo", lat: -34.5937, lng: -58.3916, horario: "09:00 - 19:00", servicios: "Info, Asistencia" },
-            { nombre: "Móvil 1", tipo: "movil", lat: -34.6137, lng: -58.3716, horario: "10:00 - 18:00", servicios: "Info General" },
-            { nombre: "Móvil 2", tipo: "movil", lat: -34.6037, lng: -58.4016, horario: "10:00 - 18:00", servicios: "Info, Primeros Auxilios" },
-            { nombre: "Centro Sur", tipo: "fijo", lat: -34.6237, lng: -58.3816, horario: "08:00 - 20:00", servicios: "Info, Asistencia, Primeros Auxilios" }
+            { nombre: "Centro Médico Monserrat", tipo: "fijo", lat: -34.6092, lng: -58.3834, horario: "De lunes a viernes de 07:00 - 20:00 hs", servicios: "Info, Primeros Auxilios", direccion: "Av. Hipólito Yrigoyen 1210, Cdad. Autónoma de Buenos Aires" },
+            { nombre: "Centro Medico Arenales", tipo: "fijo", lat: -34.5942, lng: -58.3904, horario: "De lunes a viernes de 08:00 - 20:00 hs", servicios: "Info, Asistencia", direccion: "Arenales 1611, Cdad. Autónoma de Buenos Aires" },
+            { nombre: "Unidad Sanitaria Móvil 1", tipo: "movil", lat: -34.6137, lng: -58.3716, horario: "11:00 - 17:00", servicios: "Info General", direccion: "Monasterio 480, Cdad. Autónoma de Buenos Aires"},
+            { nombre: "Unidad Sanitaria Móvil 2", tipo: "movil", lat: -34.6037, lng: -58.4016, horario: "09:00 - 15:00", servicios: "Info, Primeros Auxilios", direccion: "Av. Cnel. Díaz 2444, Cdad. Autónoma de Buenos Aires"},
+            { nombre: "Hospital Británico", tipo: "fijo", lat: -34.6334, lng: -58.3878, horario: "Abierto las 24 hs", servicios: "Info, Asistencia, Primeros Auxilios", direccion: "Perdriel 74, Cdad. Autónoma de Buenos Aires"}
         ];
         
         const now = new Date();
