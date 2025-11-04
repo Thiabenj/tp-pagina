@@ -2,65 +2,70 @@
 const sitiosData = [
     {
         id: 1,
-        nombre: "Plaza Central",
-        descripcion: "Corazón histórico de la ciudad con arquitectura colonial",
-        imagen: "https://thumbs.dreamstime.com/b/noche-en-la-habana-vieja-50826957.jpg",
+        nombre: "Teatro Colón",
+        descripcion: "Una de las salas de ópera más prestigiosas del mundo, símbolo máximo de la cultura argentina.",
+        imagen: "https://www.theatre-architecture.eu/res/archive/337/045900.jpg?seek=1535029599",
         atractivos: [
             { 
-                nombre: "Monumento a los Fundadores", 
-                descripcion: "Escultura de bronce inaugurada en 1890", 
-                detalle: "Esta impresionante obra representa a los pioneros que fundaron la ciudad. Fue creada por el reconocido escultor local y se ha convertido en un símbolo de la identidad regional." 
+                nombre: "Visita guiada por el Teatro", 
+                descripcion: "Recorrido por los principales espacios históricos del teatro.", 
+                detalle: "Incluye el Foyer, Salón Dorado, Galería de Bustos y Platea; guías especializados cuentan historia, arquitectura y curiosidades." 
             },
             { 
-                nombre: "Fuente Colonial", 
-                descripcion: "Fuente del siglo XVIII", 
-                detalle: "Construida en 1750, esta fuente servía como principal fuente de agua para los habitantes. Su diseño barroco es un ejemplo único de la arquitectura hidráulica colonial." 
+                nombre: "Exhibiciones culturales", 
+                descripcion: "Muestras relacionadas a la historia del teatro y la ópera.", 
+                detalle: "Vestuarios, afiches, maquetas, piezas históricas y archivos fotográficos." 
             },
             { 
-                nombre: "Jardines Históricos", 
-                descripcion: "Jardines con especies nativas", 
-                detalle: "Los jardines albergan más de 50 especies de plantas nativas de la región, cuidadosamente preservadas por generaciones de jardineros locales." 
-            }
+                nombre: "Tienda y espacios gastronómicos", 
+                descripcion: "Souvenirs y servicios complementarios.", 
+                detalle: "Libros, recuerdos del teatro, cafetería para visitantes." 
+            },
         ]
     },
     {
         id: 2,
-        nombre: "Museo de Arte Regional",
-        descripcion: "Colección permanente de arte local y exposiciones temporales",
-        imagen: "https://i0.wp.com/evemuseografia.com/wp-content/uploads/2020/01/EVE21012020.jpg?fit=630%2C472&ssl=1",
+        nombre: "Puente de la Mujer",
+        descripcion: "Icono moderno de Buenos Aires, símbolo de innovación y arquitectura contemporánea.",
+        imagen: "https://cdn-media.italiani.it/site-buenosaires/2019/03/Puente-de-la-Mujer-Luces-de-noche-e1552009688826.jpeg",
         atractivos: [
-            { 
-                nombre: "Sala de Arte Colonial", 
-                descripcion: "Pinturas y esculturas del período colonial", 
-                detalle: "Esta sala exhibe obras de los principales artistas coloniales que trabajaron en la región entre 1600 y 1800, incluyendo pinturas religiosas, retratos y arte sacro." 
+            {
+                nombre: "Puente giratorio",
+                descripcion: "Estructura que puede rotar para permitir el paso de embarcaciones.",
+                detalle: "Movimiento hidráulico (no siempre en uso, pero es parte de su atractivo técnico)."
             },
             { 
-                nombre: "Galería Moderna", 
-                descripcion: "Arte contemporáneo local", 
-                detalle: "Exposición rotativa de artistas contemporáneos emergentes que exploran temas de identidad regional, naturaleza y sociedad a través de diversas técnicas." 
+                nombre: "Vista panorámica", 
+                descripcion: "Vista abierta a la ciudad de Puerto Madero.", 
+                detalle: "Ideal para fotos, atardeceres y vistas nocturnas con reflejos sobre el agua." 
+            },
+            { 
+                nombre: "Paseo ribereño", 
+                descripcion: "Senderos peatonales frente al río.", 
+                detalle: "Rodeado de restaurantes, parques, docks históricos y áreas verdes." 
             }
         ]
     },
     {
         id: 3,
-        nombre: "Parque Natural",
-        descripcion: "Reserva ecológica con senderos y miradores",
-        imagen: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=500",
+        nombre: "Palacio Barolo",
+        descripcion: "Obra arquitectónica única inspirada en la Divina Comedia, símbolo de la historia y la literatura en la ciudad.",
+        imagen: "https://upload.wikimedia.org/wikipedia/commons/0/07/Palacio_Barolo.JPG",
         atractivos: [
             { 
-                nombre: "Sendero del Bosque", 
-                descripcion: "Recorrido de 3km por bosque nativo", 
-                detalle: "Un camino serpenteante que atraviesa el corazón del bosque, ideal para observar aves y la flora autóctona. El recorrido toma aproximadamente 2 horas." 
+                nombre: "Recorrido guiado", 
+                descripcion: "Tour por el interior del edificio y sus niveles temáticos.", 
+                detalle: "Inspirado en la Divina Comedia de Dante Alighieri; recorrido por Infierno, Purgatorio y Paraíso." 
             },
             { 
-                nombre: "Mirador del Valle", 
-                descripcion: "Vista panorámica a 360 grados", 
-                detalle: "Desde este punto se puede apreciar toda la extensión del valle y las montañas circundantes. Es especialmente hermoso al amanecer y atardecer." 
+                nombre: "Mirador 360° y cúpula", 
+                descripcion: "Vista panorámica única de la ciudad desde la cima.", 
+                detalle: "Incluye acceso al faro —especialmente hermoso al atardecer y de noche—." 
             },
             { 
-                nombre: "Cascada Escondida", 
-                descripcion: "Caída de agua de 15 metros", 
-                detalle: "Esta cascada permanece activa durante todo el año gracias al arroyo que la alimenta. Existe una zona de descanso con bancos y áreas de picnic." 
+                nombre: "Pasajes internos", 
+                descripcion: "Pasillos comerciales y oficinas históricas.", 
+                detalle: "Espacios que conservan la estética original del edificio." 
             }
         ]
     }
@@ -163,7 +168,7 @@ function showSitioDetail(sitioId) {
     const modalBody = document.getElementById('modal-body');
     
     modalBody.innerHTML = `
-        <img src="${sitio.imagen}" style="width: 100%; border-radius: 8px; margin-bottom: 20px;">
+        <img src="${sitio.imagen}" style="width: 100%; height: 350px; border-radius: 8px; margin-bottom: 20px;">
         <h2>${sitio.nombre}</h2>
         <p style="margin-bottom: 25px; color: #666;">${sitio.descripcion}</p>
         <h3 style="margin-bottom: 15px; color: var(--primary);">Atractivos:</h3>
